@@ -28,10 +28,4 @@ $(document).ready(function() {
       $(this).clone().appendTo('body').css('left', x).css('top', y).css('background-color', colorChoice).text(classNumber);
     }
   });
-
-  for (var i = 1; i <= 499; i++) {
-      (function(index) {
-          setTimeout(function() { $('.spot').click; }, i * 100);
-      })(i);
-  }
 });
