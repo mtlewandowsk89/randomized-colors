@@ -5,7 +5,7 @@ body {
 .dot {
   width: 50px;
   height: 50px;
-  background: lime;
+  background: white;
   border-radius: 50%;
   text-align: center;
   line-height: 50px;
@@ -13,6 +13,9 @@ body {
   position: absolute;
   font-weight: bold;
   font-size: 24px;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
 .press {
@@ -25,6 +28,8 @@ body {
   width: 60px;
   height: 300px;
   background-color: white;
+  opacity: 0.5;
+  z-index: 99;
   position: absolute;
   right: 50%;
   top: 80px;
@@ -39,7 +44,87 @@ body {
   background-color: white;
   border: 5px solid gray;
   position: absolute;
+  opacity: 0.4;
   right: 49%;
   top: 60px;
   display: none;
+}
+
+.target {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  left: 10%;
+  top: 200px;
+}
+
+.ring {
+  background-color: white;
+  width: 75px;
+  height: 75px;
+  margin: 11px auto;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.secondRing {
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  margin: 12px auto;
+  border-radius: 50%;
+}
+
+.reset {
+  position: absolute;
+  top: 25px;
+  left: 700px;
+  display: none;
+  border: 5px solid aqua;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.reset:hover {
+  border: 5px solid blue;
+  cursor: pointer;
+}
+
+.luckyColor {
+  color: #fff;
+  float: right;
+  margin-right: 300px;
+  font-size: 24px;
+  display: none;
+}
+
+.luckyNumber {
+  color: #fff;
+  margin-right: 300px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  font-size: 24px;
+  display: none;
+}
+
+.chosen {
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes grow {
+    from {width: 50px; height: 50px; z-index: 1}
+    to {width: 75px; height: 75px; z-index: 99}
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
 }
